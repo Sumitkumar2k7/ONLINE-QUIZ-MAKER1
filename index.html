@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Quiz Maker</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav>
+    <h1>QuizMaster</h1>
+    <ul>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html">Signup</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h2>Create & Take Quizzes Easily</h2>
+    <a href="create-quiz.html" class="btn">Create Quiz</a>
+    <a href="quiz-list.html" class="btn">Take Quiz</a>
+  </section>
+
+  <!-- login.html -->
+  <div class="form-container">
+    <h2>Login</h2>
+    <form>
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <!-- signup.html -->
+  <div class="form-container">
+    <h2>Sign Up</h2>
+    <form>
+      <input type="text" placeholder="Username" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+
+  <div class="form-container">
+    <h2>Create New Quiz</h2>
+    <form id="quizForm">
+      <input type="text" id="quizTitle" placeholder="Quiz Title" required>
+      <textarea id="quizQuestion" placeholder="Question" required></textarea>
+      <input type="text" placeholder="Option A">
+      <input type="text" placeholder="Option B">
+      <input type="text" placeholder="Option C">
+      <input type="text" placeholder="Option D">
+      <input type="text" placeholder="Correct Option">
+      <button type="submit">Save Quiz</button>
+    </form>
+  </div>
+
+  <div class="quiz-list">
+    <h2>Available Quizzes</h2>
+    <ul>
+      <li><a href="take-quiz.html">Math Quiz</a></li>
+      <li><a href="take-quiz.html">Science Quiz</a></li>
+    </ul>
+  </div>
+
+  <div class="quiz-box">
+    <h2>1. What is 2 + 2?</h2>
+    <ul>
+      <li><input type="radio" name="q1"> 2</li>
+      <li><input type="radio" name="q1"> 4 </li>
+      <li><input type="radio" name="q1"> 6</li>
+      <li><input type="radio" name="q1"> 8</li>
+    </ul>
+    <button onclick="submitQuiz()">Submit</button>
+  </div>
+
+  <div class="result-box">
+    <h2>Quiz Results</h2>
+    <p>Your Score: <span id="score">0</span>/1</p>
+  </div>
+
+
+</body>
+</html>
